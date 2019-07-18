@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="myStyles.css"/>
+    <!---script src="myScript.js"> </script---->
+  </head>
+
+
+
+  <body>
+    <ul>
+      <li><a href="website.html">Home</a></li>
+      <li><a href="web2.html">Contact</a></li>
+      <li style="float:right"><a class="active" href="#about">About</a></li>
+    </ul>
+
+    <center>
+      <h1> RHEA BHATIA </h1>
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="pic5.png"width= 325 height=400>
+
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="pic3.png" width= 325 height=400>
+
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="pic4.png" width= 325 height=400>
+
+        </div>
+
+      </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <!-- <button onmouseover="document.getElementById('myImage').src='pic2.png'">change picture</button>
+      <img id="myImage" src="pic2.png" style="width:325px">
+      <button onmouseover="document.getElementById('myImage').src='pic3.png'">change picture back</button> -->
+
+      <div id = "div1">
+        <p> Hi, my name is Rhea Bhatia. I am currently a junior at Naperville Central High School!
+          In my free time, I play tennis for the NCHS Girls Tennis team!
+          I am also involved in a business club named DECA.
+        </p>
+        <br>
+      </div>
+
+
+    </center>
+    <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+    </script>
+
+  </body>
+
+
+
+</HTML>
